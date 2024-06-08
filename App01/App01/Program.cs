@@ -1,4 +1,6 @@
-﻿namespace App01
+﻿using System.Text;
+
+namespace App01
 {
     internal class Program
     {
@@ -32,16 +34,11 @@
             // String input = "HELLO";
             // Console.WriteLine( input.ToLower().Contains("ll"));
             //parseContents("rajkumar");
-           // Console.WriteLine(isAtEvenIndex("", 'a'));
+            // Console.WriteLine(isAtEvenIndex("", 'a'));
 
-            String text = " hello my name is rajkumar karnakar,i live in pune ";
-            String[] words = text.Split(" ");
-            Console.WriteLine("from array of words");
-            for (int i = 0; i < words.Length; i++)
-            {
-                Console.WriteLine(words[i]);
-                
-            }
+            String text = "MADAM";
+            // Console.WriteLine(Reverse2(text.ToUpper()));
+            Console.WriteLine(isPalindrome2(text));
         }
 
         static void parseContents(String contents)
@@ -70,6 +67,60 @@
                     return true;
             }
             return false;
+        }
+        static String Reverse(String s)
+        {
+            if (!String.IsNullOrEmpty(s))
+            {
+                int length = s.Length;
+                StringBuilder reversed = new StringBuilder(length);
+                for (int i = 1;i < length; i++)
+                {
+                    reversed.Append(s[length-i]);
+                }
+                return reversed.ToString();
+            }
+            else { return s; }
+        }
+        static String Reverse2(String s)
+        {
+            if (!String.IsNullOrEmpty(s))
+            {
+                char[] chars = s.ToCharArray();
+                Array.Reverse(chars);
+                return new String(chars);
+            }
+            else { return s; }
+        }
+
+        static Boolean isPalindrome(String s)
+        {
+            String normalized = s.ToLower();
+            StringBuilder reversed = new StringBuilder(normalized.Length);
+            for (int i = normalized.Length - 1; i >= 0; i--)
+            {
+                reversed.Append(normalized[i]);
+            }
+            //Console.WriteLine(reversed.ToString());
+            if (normalized.Equals(reversed.ToString()))
+            {
+                return true;
+            }
+            return false;
+        }
+        static Boolean isPalindrome2(String s)
+        {
+            String normalized = s.ToLower();
+            int lentgth = normalized.Length;
+            for (int i = 0; i < lentgth /2; i++)
+            {
+                if (normalized[i] != normalized[lentgth - i -1])
+                {
+                    return false;
+                }
+            }
+            return true;
+
         }
       
     }

@@ -12,3 +12,4 @@ D:\codespace\data-structures\App01\App01\obj\Debug\net8.0\refint\App01.dll
 D:\codespace\data-structures\App01\App01\obj\Debug\net8.0\App01.pdb
 D:\codespace\data-structures\App01\App01\obj\Debug\net8.0\App01.genruntimeconfig.cache
 D:\codespace\data-structures\App01\App01\obj\Debug\net8.0\ref\App01.dll
+D:\codespace\data-structures\App01\App01\obj\Debug\net8.0\App01.sourcelink.json
