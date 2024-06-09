@@ -29,7 +29,7 @@ namespace App01
 
     internal class Program2
     {
-        public static void Main(string[] args)
+        public static void Main02(String[] args)
         {
             // String input = "HELLO";
             // Console.WriteLine( input.ToLower().Contains("ll"));
@@ -122,6 +122,76 @@ namespace App01
             return true;
 
         }
-      
+
     }
+
+
+
+internal class Answer
+    {
+
+        // Change these Boolean values to control whether you see 
+        // the expected result and/or hints.
+        public static void Main(String[] args)
+        {
+            string text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the " +
+                "industry's standard dummy text ever since the 1500s, when an unknown printer" +
+                " took a galley of type and scrambled it to make a type specimen book. It has survived not only" +
+                " five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. " +
+                "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum" +
+                " passages, and more recently with desktop publishing software like" +
+                " Aldus PageMaker including versions of Lorem Ipsum.";
+            string learnerResult = Answer.FindMostRepeatedWord(text);
+            Console.WriteLine("Most repeated word is: " + learnerResult);
+        }
+
+        static List<String> Normalize(String text)
+        {
+            string lowerCased = text.Trim().ToLower();
+            String[] words = lowerCased.Split('[', '\n', '\t', '\r', '.', ',', ':', ';'
+            , '?', '!', '(', ')', '{', '}', ']', ' ');
+            List<String> commonWords = new List<string>(){
+            "the","a","or","an","it","and", "but","is","are","of","on","to","was","were","in","i","that","your","his","their","her","you","me","they","at","be"
+        };
+
+            return words
+                    .Where(word => !commonWords.Contains(word) && word.Length != 0)
+                    .ToList();
+        }
+
+        public static string FindMostRepeatedWord(string text)
+        {
+            // Your code goes here.
+            List<String> uncommonWords = Normalize(text);
+            if (uncommonWords.Count == 0)
+                return "";
+
+            Dictionary<string, int> wordCountDict = new Dictionary<string, int>();
+
+            foreach (string word in uncommonWords)
+            {
+                wordCountDict.TryGetValue(word, out int freq);
+
+                wordCountDict[word] = freq + 1;
+            }
+
+            int max = 0;
+            string mostRepeatedWoerd = "";
+            foreach (var entry in wordCountDict)
+            {
+                if (entry.Value > max)
+                {
+                    mostRepeatedWoerd = entry.Key;
+                    max = entry.Value;
+                }
+            }
+
+
+
+
+            return mostRepeatedWoerd;
+        }
+
+    }
+
 }
