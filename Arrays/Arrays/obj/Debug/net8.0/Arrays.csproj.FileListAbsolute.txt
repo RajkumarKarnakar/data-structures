@@ -1,0 +1,15 @@
+D:\codespace\data-structures\Arrays\Arrays\bin\Debug\net8.0\Arrays.exe
+D:\codespace\data-structures\Arrays\Arrays\bin\Debug\net8.0\Arrays.deps.json
+D:\codespace\data-structures\Arrays\Arrays\bin\Debug\net8.0\Arrays.runtimeconfig.json
+D:\codespace\data-structures\Arrays\Arrays\bin\Debug\net8.0\Arrays.dll
+D:\codespace\data-structures\Arrays\Arrays\bin\Debug\net8.0\Arrays.pdb
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\Arrays.GeneratedMSBuildEditorConfig.editorconfig
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfoInputs.cache
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\Arrays.AssemblyInfo.cs
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\Arrays.csproj.CoreCompileInputs.cache
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\Arrays.sourcelink.json
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\Arrays.dll
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\refint\Arrays.dll
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\Arrays.pdb
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\Arrays.genruntimeconfig.cache
+D:\codespace\data-structures\Arrays\Arrays\obj\Debug\net8.0\ref\Arrays.dll
