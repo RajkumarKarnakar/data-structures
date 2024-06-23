@@ -1,4 +1,5 @@
 package com.sorting;
+
 public class Merge {
     public static void sort(int[] a) {
         mergeSort(a, a.length);
@@ -10,12 +11,8 @@ public class Merge {
         int mid = n / 2;
         int[] l = new int[mid];
         int[] r = new int[n - mid];
-        for (int i = 0; i < mid; i++) {
-            l[i] = arr[i];
-        }
-        for (int i = mid; i < n; i++) {
-            r[i - mid] = arr[i];
-        }
+        System.arraycopy(arr, 0, l, 0, mid);
+        if (n - mid >= 0) System.arraycopy(arr, mid, r, mid - mid, n - mid);
         mergeSort(l, mid);
         mergeSort(r, n - mid);
         merge(arr, l, r, mid, n - mid);

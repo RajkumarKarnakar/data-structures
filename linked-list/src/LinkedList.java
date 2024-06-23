@@ -57,7 +57,7 @@ public class LinkedList<T> {
     public boolean remove(T data) {
         //implement this method
 
-        if(head.data == data){
+        if (head.data == data) {
             head = head.next;
         }
         Node<T> current = head;
